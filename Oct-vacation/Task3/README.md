@@ -8,5 +8,7 @@
 <img src="./Screenshot2.png" alt="screenshot">
 Xdx写了两天，累死了~_~
 
+### 增加幂运算，括号
+### 历史记录正在开发中...
 @Author:艾合拉木·阿里木  
 @Email:2668976818@qq.com
