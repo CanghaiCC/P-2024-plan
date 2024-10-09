@@ -12,10 +12,12 @@
 </head>
 <script src="resources\js\calculator.js"></script>
 <script>
+ // 加载音频对象
+  const music=new Audio("1.mp3");
 //  表达式变量
-  expression="";
+  var expression="";
 //  表示拆分数组
-  array=new Array();
+  var array=new Array();
 //  用户点击控件发生的事件
   function ifUserClick(id)
   {
@@ -59,6 +61,11 @@
   {
     expression='';
     document.getElementById("text").innerHTML=expression;
+  }
+  // 欧尼酱音效
+  function acountics()
+  {
+    music.play();
   }
 </script>
 <body style="background: #95adba;">
@@ -157,6 +164,9 @@
         </div>
         <div class="button-div2" id="buttonAC">
           <button class="button" id="bAC" onclick="allClear()">AC</button>
+        </div>
+        <div class="button-div2" id="buttonON">
+          <button class="button" id="buON" onclick="acountics()">=</button>
         </div>
       </div>
     </div>
