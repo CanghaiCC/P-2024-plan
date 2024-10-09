@@ -4,7 +4,7 @@
 
 # 计算器UI完工！
 
-<img src="./Screenshot 2024-10-09 171635.png" alt="screenshot">
+<img src="./Screenshot2" alt="screenshot">
 Xdx写了两天，累死了~_~
 
 @Author:艾合拉木·阿里木  
