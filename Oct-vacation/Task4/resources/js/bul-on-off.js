@@ -1,4 +1,4 @@
 function changeImage() {
   // TODO
-  // 在此处，实现小灯开关的功能！
+  document.getElementById("myimage").src="resources/imgs/pic_bulbon.gif";
 }
