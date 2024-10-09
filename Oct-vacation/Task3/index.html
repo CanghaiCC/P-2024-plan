@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>计算器</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="resources\css\main.css">
+</head>
+<script src="resources\js\calculator.js"></script>
+<script>
+//  表达式变量
+  expression="";
+//  表示拆分数组
+  array=new Array();
+//  用户点击控件发生的事件
+  function ifUserClick(id)
+  {
+    var text=document.getElementById(id).innerText;
+    expression=document.getElementById("text").innerText+text;
+    document.getElementById("text").innerHTML=expression;
+    array=[...expression];//拆分，这个语法太喜欢了
+  }
+//  乘法专用
+  function ifUserClick1(id)
+  {
+    var text="*";
+    expression=document.getElementById("text").innerText+text;
+    document.getElementById("text").innerHTML=expression;
+    array=[...expression];
+  }
+  //  调用计算函数
+  function calculator1()
+  {
+    const result=calculate(expression);
+    document.getElementById("result").innerHTML=result;
+  }
+  //  删除键
+  function Delete()
+  {
+    array.pop();
+    expression=array.join('');
+    document.getElementById("text").innerHTML=expression;
+
+  }
+</script>
+<body style="background: #95adba;">
+  <!--计算器主体-->
+  <div id="main">
+    <!--标题-->
+    <div id="title">
+      <h1 class="text" style="text-align: center;">先锋计算器</h1>
+    </div>
+    <!--提示文本-->
+    <div id="p1">
+      <p class="text" style="font-size: 16px;">请输入表达式进行计算：</p>
+    </div>
+    <!--输入框-->
+    <div id="input-frame">
+      <!--输入-->
+      <div id="it">
+        <div id="it1">
+          <p class="text" id="text"></p>
+        </div>
+        <input class="text" type="submit" id="it2" value="计算" onclick="calculator1()" />
+      </div>
+      <!--结果-->
+      <div id="ot">
+        <div id="ot1">
+          <p class="text">结果是：</p>
+        </div>
+        <div id="ot2">
+          <p id="result" style="margin: 0;margin-top: 1px;font-size: 18px;"></p>
+        </div>
+      </div>
+    </div>
+    <!--计算控件-->
+    <div id="button-main">
+      <!--数字键-->
+      <div id="button-number">
+        <div id="button1" class="button-div1">
+          <button class="button" id="b1" onclick="ifUserClick('b1')">1</button>
+        </div>
+        <div id="button2" class="button-div1">
+          <button class="button" id="b2" onclick="ifUserClick('b2')">2</button>
+        </div>
+        <div id="button3" class="button-div1">
+          <button class="button" id="b3" onclick="ifUserClick('b3')">3</button>
+        </div>
+        <div id="button4" class="button-div1">
+          <button class="button" id="b4" onclick="ifUserClick('b4')">4</button>
+        </div>
+        <div id="button5" class="button-div1">
+          <button class="button" id="b5" onclick="ifUserClick('b5')">5</button>
+        </div>
+        <div id="button6" class="button-div1">
+          <button class="button" id="b6" onclick="ifUserClick('b6')">6</button>
+        </div>
+        <div id="button7" class="button-div1">
+          <button class="button" id="b7" onclick="ifUserClick('b7')">7</button>
+        </div>
+        <div id="button8" class="button-div1">
+          <button class="button" id="b8" onclick="ifUserClick('b8')">8</button>
+        </div>
+        <div id="button9" class="button-div1">
+          <button class="button" id="b9" onclick="ifUserClick('b9')">9</button>
+        </div>
+        <div id="button0" class="button-div1">
+          <button class="button" id="b0" onclick="ifUserClick('b0')">0</button>
+        </div>
+        <div id="button." class="button-div1">
+          <button class="button" id="b." onclick="ifUserClick('b.')">.</button>
+        </div>
+      </div>
+      <!--计算符号-->
+      <div id="button-symbol">
+        <div class="button-div2" id="button+">
+          <button class="button" id="b+" onclick="ifUserClick('b+')">+</button>
+        </div>
+        <div class="button-div2" id="button-">
+          <button class="button" id="b-" onclick="ifUserClick('b-')">-</button>
+        </div>
+        <div class="button-div2" id="button×">
+          <button class="button" id="b×" onclick="ifUserClick1()">×</button>
+        </div>
+        <div class="button-div2" id="button/">
+          <button class="button" id="b/" onclick="ifUserClick('b/')">/</button>
+        </div>
+        <div class="button-div2" id="button(">
+          <button class="button" id="b(" onclick="ifUserClick('b(')">(</button>
+        </div>
+        <div class="button-div2" id="button)">
+          <button class="button" id="b)" onclick="ifUserClick('b)')">)</button>
+        </div>
+        <div class="button-div2" id="button^">
+          <button class="button" id="b^" onclick="ifUserClick('b^')">^</button>
+        </div>
+        <div class="button-div2" id="buttonBack">
+          <button class="button" id="bb" onclick="Delete()">←</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

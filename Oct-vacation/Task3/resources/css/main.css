@@ -1,0 +1,118 @@
+.text
+{
+	margin: 0;
+}
+#main
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 800px;
+	border: 4px outset #c0d2d9;
+	border-radius: 10px;
+}
+#title
+{
+	position: relative;
+	height: 50px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#p1
+{
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0;
+}
+/* 输入框 */
+#input-frame
+{
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 30px;
+	margin-top: 2px;
+}
+#it1
+{
+	float: left;
+	height: 26px;
+	width: 400px;
+	font-size: 18px;
+	margin: 0;
+	background: white;
+	border: 2px outset #c0d2d9;
+}
+#it2
+{
+	position: relative;
+	font-size: 15.6px;
+
+	border: 3px outset #c0d2d9;
+}
+#it
+{
+	float: left;
+	width: 455px;
+}
+#ot
+{
+	float: right;
+	height: 30px;
+
+}
+#ot2
+{
+	float: right;
+	height: 30px;
+}
+#ot1
+{
+	float: left;
+	text-align: center;
+	height: 27px;
+	padding-top: 3px;
+}
+#button-main
+{
+	position: relative;
+	margin: 5px;
+	margin-top: 10px;
+	height: 280px;
+}
+#button-number
+{
+	float: left;
+	width: 330px;
+}
+/*容器控件*/
+.button-div1
+{
+	float: left;
+	margin: 5px;
+
+}
+.button-div2
+{
+	float: left;
+	margin: 5px;
+
+}
+.button
+{
+	width: 100px;
+	height: 50px;
+	border: 2px outset #c0d2d9;
+	font-size: 30px;
+	text-align: center;
+	background: #b1b4a4;
+	margin: 0;
+}
+#button-symbol
+{
+	float: right;
+	width: 330px;
+
+}

@@ -79,11 +79,8 @@ function calculate(expression) {
       operatorStack.push(token);
     }
   }
-
+  
   // 调用 evaluate 函数计算最终结果并返回
   return evaluate();
 }
 
-// 使用示例
-const result = calculate("1+1");
-console.log(result); // 输出计算结果
