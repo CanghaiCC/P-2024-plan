@@ -1,6 +1,7 @@
 # Task 4
 
-请补充个人信息后，在此完成报告！
+已完成修改
+环境用的phpstudy，vscode也配置好了，截图后面补
 
-@Author:  
-@Email:
+@Author:  艾合拉木·阿里木
+@Email:2668976818@qq.com
